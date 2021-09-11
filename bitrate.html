@@ -44,7 +44,7 @@
       justify-content: center;
       align-items: center;
       max-width: 800px;
-      margin: auto;
+      margin: auto 0;
       background: rgba(50, 50, 50, 0.7);
       padding: 1em;
       border-radius: 1.7em;
@@ -82,10 +82,23 @@
       top: 50vh;
       opacity: 0.5;
     }
+
+    #heading {
+      margin-top: 20vh;
+      font-size: 1.5em;
+    }
+
+    #webmTut {
+      color: rgb(255, 240, 204);
+      font-size: 1em;
+    }
   </style>
 </head>
 
 <body>
+  <div id="heading">
+    اداة تساعدك في تحديد البتريت. <a href="https://i.imgur.com/aOtvn4V.png" id="webmTut">اعدادات الويب ام</a>
+  </div>
   <div id="wrapper">
     <label for="duration">المدة بالثواني</label>
     <input id="duration" name="duration" type="text" placeholder="ex: 30s" oninput="update()">
