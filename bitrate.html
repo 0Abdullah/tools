@@ -143,13 +143,6 @@
             width: 15vw;
         }
         
-        @media only screen and (max-width: 630px) {
-            #heading-wrapper {
-                margin-top: -20px;
-                font-size: 20px;
-            }
-        }
-        
         @media only screen and (max-width: 740px) {
             #adobe {
                 min-width: 200px;
@@ -185,6 +178,44 @@
                 position: static;
                 transform: none;
                 margin-top: 50px;
+            }
+        }
+        
+        @media only screen and (max-width: 630px) {
+            body {
+                display: block;
+                height: 100vh;
+                padding: 30px;
+                overflow: hidden;
+                background: url("bg.png") center;
+            }
+            #wrapper {
+                min-width: 300px;
+                max-width: 700px;
+                background: #1a1a39;
+                position: fixed;
+                top: 50%;
+                right: 50%;
+                transform: translateY(-50%) translateX(50%);
+                padding: 1em;
+                border-radius: 1.7em;
+            }
+            #heading-wrapper {
+                margin-right: 0px;
+                margin-top: -20px;
+            }
+            #footer {
+                position: fixed;
+                bottom: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #btn {
+                margin-bottom: 20px;
             }
         }
     </style>
