@@ -16,6 +16,7 @@
       font-size: 20px;
       box-sizing: border-box;
       color: white;
+      text-align: center;
     }
 
     input {
@@ -24,28 +25,22 @@
       border-radius: 1em;
       outline: none;
       background: rgba(70, 70, 70, 1);
-      text-align: center;
     }
 
     body {
       height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       padding: 30px;
       overflow: hidden;
       background: rgb(28, 28, 28);
     }
 
     #wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       max-width: 800px;
-      margin: auto 0;
       background: rgba(50, 50, 50, 0.7);
+      position: fixed;
+      top: 50%;
+      right: 50%;
+      transform: translateY(-50%) translateX(50%);
       padding: 1em;
       border-radius: 1.7em;
     }
@@ -78,26 +73,52 @@
       position: absolute;
       z-index: -100;
       width: 300px;
-      right: 0;
+      right: -100px;
       top: 50vh;
       opacity: 0.5;
     }
 
     #heading {
-      margin-top: 20vh;
       font-size: 1.5em;
+    }
+
+    #heading-wrapper {
+      margin-top: 75px;
     }
 
     #webmTut {
       color: rgb(255, 240, 204);
       font-size: 1em;
     }
+
+    @media only screen and (max-height: 700px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #wrapper {
+        position: static;
+        top: 0;
+        right: 0;
+        transform: none;
+      }
+
+      #heading-wrapper {
+        margin-right: 50px;
+        margin-top: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div id="heading">
-    اداة تساعدك في تحديد البتريت. <a href="https://i.imgur.com/aOtvn4V.png" id="webmTut">اعدادات الويب ام</a>
+  <div id="heading-wrapper">
+    <div id="heading">
+      اداة تساعدك في تحديد البتريت. <a href="https://i.imgur.com/aOtvn4V.png" id="webmTut">اعدادات الويب ام</a>
+    </div>
+    <div id="author">Made By <a href="https://www.instagram.com/3bdullahvv/"> Abdullah.<img src="https://i.imgur.com/KWrAgVY.png" id="logo" /></a></div>
   </div>
   <div id="wrapper">
     <label for="duration">المدة بالثواني</label>
@@ -106,7 +127,6 @@
     <input id="size" name="size" type="text" placeholder="StreamElements Max = 30mb" oninput="update()">
     <div id="result"></div>
   </div>
-  <div id="footer">Made By <a href="https://www.instagram.com/3bdullahvv/"> Abdullah.<img src="https://i.imgur.com/KWrAgVY.png" id="logo" /></a></div>
   <img src="https://i.imgur.com/bp4mFDi.png" id="bs">
 
   <script>
